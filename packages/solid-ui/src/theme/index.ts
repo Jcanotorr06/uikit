@@ -4,3 +4,4 @@ export * from "./colors"
 export * from "./css-baseline"
 
 export { default as UIProvider } from "./theme-provider"
+export { changeTheme, getDocumentTheme, getTokenValue } from "./utils"
