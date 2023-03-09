@@ -1,0 +1,20 @@
+{
+	"name": "solid-ui-sandbox",
+	"version": "0.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"start": "vite",
+		"dev": "vite",
+		"build": "vite build",
+		"serve": "vite preview"
+	},
+	"devDependencies": {
+		"vite": "^4.0.4",
+		"vite-plugin-solid": "^2.5.0"
+	},
+	"dependencies": {
+		"solid-ui": "^0.0.1",
+		"solid-js": "^1.6.9"
+	}
+}
