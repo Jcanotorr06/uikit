@@ -29,7 +29,7 @@ declare namespace ConfigType {
 }
 
 export type BaseTheme = ConfigType.Theme
-export type NextUITheme = StitchesTheme
+export type UITheme = StitchesTheme
 export type ThemeType = "dark" | "light"
 export type CreateTheme = ReturnType<typeof createThemeBase>
 
@@ -50,7 +50,7 @@ export type Theme = {
 
 export type UIThemeContext = {
 	type: ThemeType | string
-	theme?: NextUITheme
+	theme?: UITheme
 	isDark?: boolean
 }
 
