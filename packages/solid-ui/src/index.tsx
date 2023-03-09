@@ -1,24 +1,31 @@
-import { Accessor, Component, createComputed, createSignal } from "solid-js"
+export * from "./utils/prop-types"
 
-export function createHello(): [Accessor<string>, (to: string) => void] {
-	const [hello, setHello] = createSignal("Bye World!")
+export {
+	UIProvider,
+	changeTheme,
+	getDocumentTheme,
+	getTokenValue,
+	type VariantProps,
+	type CSS,
+	styled,
+	css,
+	theme,
+	createTheme,
+	getCssText,
+	globalCss,
+	keyframes,
+	config,
+	config as stitchesConfig,
+	theme as defaultTheme,
+	type Theme,
+	type UITheme,
+	type CreateTheme,
+	type UIThemeContext,
+} from "./theme"
 
-	return [hello, (to: string) => setHello(`Hello ${to}!`)]
-}
+export * from "./theme/shared-css"
+export * from "./theme/colors"
 
-export const Hello: Component<{ to?: string }> = props => {
-	const [hello, setHello] = createHello()
-
-	// This will only log during development, console is removed in production
-	console.log("Hello World!")
-
-	createComputed(() => {
-		if (typeof props.to === "string") setHello(props.to)
-	})
-
-	return (
-		<>
-			<div>{hello()}</div>
-		</>
-	)
-}
+// Components
+export { default as Container } from "./container"
+export * from "./container"
