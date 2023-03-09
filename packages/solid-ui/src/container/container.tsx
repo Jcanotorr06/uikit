@@ -100,3 +100,5 @@ const Container: ParentComponent<ContainerProps> = props => {
 }
 
 Container.toString = () => ".solid-container"
+
+export default Container
